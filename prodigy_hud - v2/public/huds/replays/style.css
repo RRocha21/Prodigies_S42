@@ -1567,7 +1567,7 @@ sub {
 }
 
 .players_left_container>.player_container>.top_bar>.player_name {
-    font-size: 18px;
+    font-size: 19px;
     font-family: 'Bebas Neue Pro';
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -1576,8 +1576,8 @@ sub {
     text-align: left;
     letter-spacing: 0.9;
     position: absolute;
-    left: 62px;
-    top: 2px;
+    left: 55px;
+    top: 1px;
     z-index: 283;
     height: 27px;
     width: 150px;
@@ -1878,7 +1878,7 @@ sub {
 }
 
 .players_right_container>.player_container>.top_bar>.player_name {
-    font-size: 18px;
+    font-size: 19px;
     font-family: 'Bebas Neue Pro';
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -1887,8 +1887,8 @@ sub {
     text-align: right;
     letter-spacing: 0.9;
     position: absolute;
-    right: 62px;
-    top: 2px;
+    right: 55px;
+    top: 1px;
     z-index: 283;
     height: 27px;
     width: 150px;
@@ -5226,11 +5226,11 @@ sub {
 
 .dead_name_left {
     transition: all 0.5s ease 0s !important;
-    transform: translate(-60px, 0px) !important;
-    -webkit-transform: translate(-60px, 0px) !important;
-    -moz-transform: translate(-60px, 0px) !important;
-    -ms-transform: translate(-60px, 0px) !important;
-    -o-transform: translate(-60px, 0px) !important;
+    transform: translate(-50px, 0px) !important;
+    -webkit-transform: translate(-50px, 0px) !important;
+    -moz-transform: translate(-50px, 0px) !important;
+    -ms-transform: translate(-50px, 0px) !important;
+    -o-transform: translate(-50px, 0px) !important;
     -webkit-transition: all 0.5s ease 0s !important;
     -moz-transition: all 0.5s ease 0s !important;
     -ms-transition: all 0.5s ease 0s !important;
@@ -5239,11 +5239,11 @@ sub {
 
 .dead_name_right {
     transition: all 0.5s ease 0s !important;
-    transform: translate(60px, 0px) !important;
-    -webkit-transform: translate(60px, 0px) !important;
-    -moz-transform: translate(60px, 0px) !important;
-    -ms-transform: translate(60px, 0px) !important;
-    -o-transform: translate(60px, 0px) !important;
+    transform: translate(50px, 0px) !important;
+    -webkit-transform: translate(50px, 0px) !important;
+    -moz-transform: translate(50px, 0px) !important;
+    -ms-transform: translate(50px, 0px) !important;
+    -o-transform: translate(50px, 0px) !important;
     -webkit-transition: all 0.5s ease 0s !important;
     -moz-transition: all 0.5s ease 0s !important;
     -ms-transition: all 0.5s ease 0s !important;
