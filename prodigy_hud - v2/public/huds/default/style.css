@@ -1452,10 +1452,9 @@ sub {
     color: #031023;
     font-size: 19px;
     font-family: "Edo SZ";
-    z-index: 100;
+    z-index: 450;
     font-weight: 700;
     line-height: 0.9;
-    z-index: 314;
 }
 
 .players_left_container>.player_container {
@@ -1570,7 +1569,7 @@ sub {
     text-align: left;
     letter-spacing: 1.1;
     position: absolute;
-    left: 72px;
+    left: 65px;
     top: 0px;
     z-index: 283;
     height: 27px;
@@ -1765,10 +1764,9 @@ sub {
     color: #031023;
     font-size: 19px;
     font-family: "Edo SZ";
-    z-index: 100;
+    z-index: 450;
     font-weight: 700;
     line-height: 0.9;
-    z-index: 314;
 }
 
 .players_right_container>.player_container {
@@ -1884,7 +1882,7 @@ sub {
     text-align: right;
     letter-spacing: 1.1;
     position: absolute;
-    right: 72px;
+    right: 65px;
     top: 0px;
     z-index: 283;
     height: 27px;

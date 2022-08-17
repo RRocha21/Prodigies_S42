@@ -152,7 +152,7 @@ function fillObserved(player) {
     $(".observed_container>.observed_bar>.kda_container>.deaths>.d").html("D <font color='#fff'>" + statistics.deaths + "</font>");
 
     obs_player_name = player.name;
-    if (obs_player_name.length > 12) obs_player_name = obs_player_name.substring(0, 12);
+    if (obs_player_name.length > 13) obs_player_name = obs_player_name.substring(0, 13);
     $(".observed_container>.name").html(obs_player_name);
 
     $("#nades").html("");
@@ -640,7 +640,7 @@ function fillPlayer(player, nr, side, max) {
     if (player.observer_slot <= 5) {
 
         player_name = player.name;
-        if (player_name.length > 11) player_name = player_name.substring(0, 11);
+        if (player_name.length > 13) player_name = player_name.substring(0, 13);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
@@ -676,7 +676,7 @@ function fillPlayer(player, nr, side, max) {
 
     } else if (player.observer_slot < 10) {
         player_name = player.name;
-        if (player_name.length > 11) player_name = player_name.substring(0, 11);
+        if (player_name.length > 13) player_name = player_name.substring(0, 13);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
@@ -711,7 +711,7 @@ function fillPlayer(player, nr, side, max) {
 
     } else if (player.observer_slot == 10) {
         player_name = player.name;
-        if (player_name.length > 11) player_name = player_name.substring(0, 11);
+        if (player_name.length > 13) player_name = player_name.substring(0, 13);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html("0");
