@@ -48,6 +48,22 @@ sub {
     -o-transform: scale(0.9);
 }
 
+.center_inner_back {
+    transform: rotate(64deg);
+    -webkit-transform: rotate(64deg);
+    -moz-transform: rotate(64deg);
+    -ms-transform: rotate(64deg);
+    -o-transform: rotate(64deg);
+}
+
+.center_inner_back_2 {
+    transform: rotate(296deg);
+    -webkit-transform: rotate(296deg);
+    -moz-transform: rotate(296deg);
+    -ms-transform: rotate(296deg);
+    -o-transform: rotate(296deg);
+}
+
 @keyframes chickenIn {
     0% {
         opacity: 0;
@@ -263,7 +279,7 @@ sub {
 .firepower {
     position: absolute;
     left: 740px;
-    top: 90px;
+    top: 105px;
     width: 440px;
     height: 22px;
     opacity: 0;
@@ -623,13 +639,31 @@ sub {
 .header_container>.center_inner {
     background-image: url(../../files/img/hud_elements/back.png);
     position: absolute;
-    left: 396px;
+    left: 386px;
     top: 0px;
-    width: 200px;
-    height: 86px;
+    width: 220px;
+    height: 104px;
     z-index: 8;
     /*border-radius: 20px;*/
-    clip-path: polygon(23% 0, 77% 0, 98% 100%, 2% 100%);
+    clip-path: polygon(27% 0, 73% 0, 97% 100%, 3% 100%);
+}
+
+.center_inner_back {
+    position: absolute;
+    right: 421px;
+    top: 0px;
+    width: 148px;
+    height: 148px;
+    z-index: 9;
+}
+
+.center_inner_back_2 {
+    position: absolute;
+    left: 419px;
+    top: 0px;
+    width: 148px;
+    height: 148px;
+    z-index: 9;
 }
 
 .header_container>.center_inner>.bomb {
@@ -637,11 +671,11 @@ sub {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 200px;
-    height: 86px;
+    width: 220px;
+    height: 104px;
     z-index: 9;
     /*border-radius: 20px;*/
-    clip-path: polygon(23% 0, 77% 0, 98% 100%, 2% 100%);
+    clip-path: polygon(23% 0, 77% 0, 97% 100%, 3% 100%);
 }
 
 .header_container>.snow {
@@ -663,7 +697,7 @@ sub {
     line-height: 0.9;
     position: absolute;
     left: 451px;
-    top: 42px;
+    top: 53px;
     position: absolute;
     width: 100px;
     height: 40px;
@@ -817,7 +851,7 @@ sub {
     color: #ffffff;
     width: 105px;
     height: 16px;
-    top: 6px;
+    top: 16px;
     left: 20px;
     position: absolute;
     text-align: center;
@@ -3023,7 +3057,7 @@ sub {
 
 .firepower_money_left {
     position: absolute;
-    top: 90px;
+    top: 105px;
     left: 528px;
     width: 205px;
     height: 100px;
@@ -3139,7 +3173,7 @@ sub {
 
 .firepower_money_right {
     position: absolute;
-    top: 90px;
+    top: 105px;
     right: 528px;
     width: 205px;
     height: 100px;
@@ -3258,7 +3292,7 @@ sub {
 
 .round_winner {
     position: absolute;
-    top: 120px;
+    top: 135px;
     left: 780px;
     width: 360px;
     height: 75px;

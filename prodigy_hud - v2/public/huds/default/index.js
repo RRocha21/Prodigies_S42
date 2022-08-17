@@ -1651,6 +1651,9 @@ function updatePage(data) {
 
     $(".header_container>.center_inner").css("border", "solid 3px rgb(255,255,255)");
     $(".header_container>.center_inner").css("box-shadow", "inset 0px 0px 20px 5px rgb(255,255,255)");
+    $(".center_inner_back").css("border-top", "solid 3px rgb(255,255,255)");
+    $(".center_inner_back_2").css("border-top", "solid 3px rgb(255,255,255)");
+
 
 
     // LEFT
