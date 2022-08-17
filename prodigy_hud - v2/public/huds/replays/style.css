@@ -64,6 +64,22 @@ sub {
     -o-transform: scale(0.95);
 }
 
+.center_inner_back {
+    transform: rotate(64deg);
+    -webkit-transform: rotate(64deg);
+    -moz-transform: rotate(64deg);
+    -ms-transform: rotate(64deg);
+    -o-transform: rotate(64deg);
+}
+
+.center_inner_back_2 {
+    transform: rotate(296deg);
+    -webkit-transform: rotate(296deg);
+    -moz-transform: rotate(296deg);
+    -ms-transform: rotate(296deg);
+    -o-transform: rotate(296deg);
+}
+
 @keyframes chickenIn {
     0% {
         opacity: 0;
@@ -647,6 +663,24 @@ sub {
     clip-path: polygon(27% 0, 73% 0, 97% 100%, 3% 100%);
 }
 
+.center_inner_back {
+    position: absolute;
+    right: 421px;
+    top: 0px;
+    width: 147px;
+    height: 147px;
+    z-index: 100;
+}
+
+.center_inner_back_2 {
+    position: absolute;
+    left: 419px;
+    top: 0px;
+    width: 147px;
+    height: 147px;
+    z-index: 100;
+}
+
 .header_container>.center_inner>.bomb {
     /*background-color: rgba(0, 0, 0, 0.8);*/
     position: absolute;
@@ -678,7 +712,7 @@ sub {
     line-height: 0.9;
     position: absolute;
     left: 451px;
-    top: 53px;
+    top: 42px;
     width: 100px;
     height: 40px;
     z-index: 57;
@@ -831,7 +865,7 @@ sub {
     color: #ffffff;
     width: 105px;
     height: 16px;
-    top: 16px;
+    top: 6px;
     left: 20px;
     position: absolute;
     text-align: center;
