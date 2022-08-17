@@ -279,7 +279,7 @@ sub {
 .firepower {
     position: absolute;
     left: 740px;
-    top: 105px;
+    top: 120px;
     width: 440px;
     height: 22px;
     opacity: 0;
@@ -652,8 +652,8 @@ sub {
     position: absolute;
     right: 421px;
     top: 0px;
-    width: 148px;
-    height: 148px;
+    width: 147px;
+    height: 147px;
     z-index: 9;
 }
 
@@ -661,8 +661,8 @@ sub {
     position: absolute;
     left: 419px;
     top: 0px;
-    width: 148px;
-    height: 148px;
+    width: 147px;
+    height: 147px;
     z-index: 9;
 }
 
@@ -3057,7 +3057,7 @@ sub {
 
 .firepower_money_left {
     position: absolute;
-    top: 105px;
+    top: 120px;
     left: 528px;
     width: 205px;
     height: 100px;
@@ -3173,7 +3173,7 @@ sub {
 
 .firepower_money_right {
     position: absolute;
-    top: 105px;
+    top: 120px;
     right: 528px;
     width: 205px;
     height: 100px;
@@ -3292,7 +3292,7 @@ sub {
 
 .round_winner {
     position: absolute;
-    top: 135px;
+    top: 150px;
     left: 780px;
     width: 360px;
     height: 75px;
