@@ -2,7 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    color: #fff;
     overflow: hidden;
     border-radius: 0px !important;
     font-family: "";
@@ -637,45 +637,66 @@ sub {
 }
 
 .header_container>.center_inner {
-    background-image: url(../../files/img/hud_elements/back.png);
     position: absolute;
-    left: 386px;
+    left: 389px;
     top: 0px;
     width: 220px;
     height: 104px;
-    z-index: 8;
+    z-index: 7;
     /*border-radius: 20px;*/
     clip-path: polygon(27% 0, 73% 0, 97% 100%, 3% 100%);
 }
 
-.center_inner_back {
-    position: absolute;
-    right: 421px;
-    top: 0px;
-    width: 147px;
-    height: 147px;
-    z-index: 9;
-}
-
-.center_inner_back_2 {
-    position: absolute;
-    left: 419px;
-    top: 0px;
-    width: 147px;
-    height: 147px;
-    z-index: 9;
-}
-
-.header_container>.center_inner>.bomb {
-    /*background-color: rgba(0, 0, 0, 0.8);*/
+.header_container>.center_inner>.background {
     position: absolute;
     left: 0px;
     top: 0px;
     width: 220px;
     height: 104px;
-    z-index: 9;
+    z-index: 8;
     /*border-radius: 20px;*/
-    clip-path: polygon(23% 0, 77% 0, 97% 100%, 3% 100%);
+    background-image: url(../../files/img/hud_elements/back.png);
+    overflow: hidden;
+}
+
+.header_container>.center_inner>.center_inner_back {
+    position: absolute;
+    right: 31px;
+    top: -26px;
+    width: 217px;
+    height: 217px;
+    z-index: 10;
+}
+
+.header_container>.center_inner>.center_inner_back_2 {
+    position: absolute;
+    left: 31px;
+    top: -26px;
+    width: 217px;
+    height: 217px;
+    z-index: 10;
+}
+
+.header_container>.center_inner>.inner_shadow {
+    position: absolute;
+    left: 0px;
+    top: -6px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    /* background: red; */
+    /*border-radius: 20px;*/
+}
+
+.header_container>.center_inner>.bomb {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    z-index: 9;
+    background: red;
+    border-radius: 20px;
 }
 
 .header_container>.snow {
