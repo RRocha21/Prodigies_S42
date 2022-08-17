@@ -43,7 +43,8 @@ var dark_t_color = "0, 0, 0";
 //var ct_color = "0, 172, 230";
 //var dark_ct_color = "0, 38, 51";
 //var dark_t_color = "51, 28, 0";
-var warning = "219, 53, 55";
+var warning = "229, 16, 27";
+/*var warning = "219, 53, 55";*/
 //var dark_t_color = "26, 14, 0";
 //var dark_ct_color = "0, 28, 38";
 

@@ -712,7 +712,7 @@ sub {
     line-height: 0.9;
     position: absolute;
     left: 451px;
-    top: 42px;
+    top: 53px;
     width: 100px;
     height: 40px;
     z-index: 57;
@@ -865,7 +865,7 @@ sub {
     color: #ffffff;
     width: 105px;
     height: 16px;
-    top: 6px;
+    top: 16px;
     left: 20px;
     position: absolute;
     text-align: center;
