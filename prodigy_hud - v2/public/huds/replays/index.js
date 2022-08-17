@@ -1605,7 +1605,7 @@ function updatePage(data) {
     $(".header_container>.right_line").css("box-shadow", "inset 0px 0px 50px 3px rgb(" + right_color + ")");
 
     $(".header_container>.center_inner").css("border", "solid 3px rgb(255,255,255)");
-    $(".header_container>.center_inner").css("box-shadow", "inset 0px 0px 50px 5px rgb(255,255,255)");
+    $(".header_container>.center_inner").css("box-shadow", "inset 0px 0px 20px 5px rgb(255,255,255)");
 
 
     // LEFT
