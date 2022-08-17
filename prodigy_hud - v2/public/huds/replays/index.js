@@ -1922,13 +1922,13 @@ function updatePage(data) {
                 $(".win_container > .chicken").css("background-image", "url(../../files/img/round_win/ct.png)");
                 $(".win_container>.bg_container>.bg").css("border", "solid 3px rgb(" + ct_color + ")");
                 $(".win_container>.bg_container>.bg").css("box-shadow", "inset 0px 0px 60px 5px rgba(" + ct_color + ",0.8)");
-                $(".win_container>.bg_container>.text").css("color", " rgb(" + ct_color + ")")
+                $(".win_container>.bg_container>.text").css("color", " rgb(255,255,255)")
             } else if (gameside == "t") {
                 //$(".win_container > .chicken").css("background-image", "url(/files/img/hud_elements/win_t_chicken.png)");
                 $(".win_container > .chicken").css("background-image", "url(../../files/img/round_win/t.png)");
                 $(".win_container>.bg_container>.bg").css("border", "solid 3px rgb(" + t_color + ")");
                 $(".win_container>.bg_container>.bg").css("box-shadow", "inset 0px 0px 60px 5px  rgba(" + t_color + ",0.8)")
-                $(".win_container>.bg_container>.text").css("color", " rgb(" + t_color + ")")
+                $(".win_container>.bg_container>.text").css("color", " rgb(255,255,255)")
             }
 
             $(".win_container > .chicken").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
