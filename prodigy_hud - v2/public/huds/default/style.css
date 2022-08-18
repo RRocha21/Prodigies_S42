@@ -4,6 +4,7 @@ body {
     padding: 0;
     color: #fff;
     overflow: hidden;
+    background: blanchedalmond;
     border-radius: 0px !important;
     font-family: "";
     font-weight: 500;
@@ -49,19 +50,19 @@ sub {
 }
 
 .center_inner_back {
-    transform: rotate(64deg);
-    -webkit-transform: rotate(64deg);
-    -moz-transform: rotate(64deg);
-    -ms-transform: rotate(64deg);
-    -o-transform: rotate(64deg);
+    transform: rotate(63deg);
+    -webkit-transform: rotate(63deg);
+    -moz-transform: rotate(63deg);
+    -ms-transform: rotate(63deg);
+    -o-transform: rotate(63deg);
 }
 
 .center_inner_back_2 {
-    transform: rotate(296deg);
-    -webkit-transform: rotate(296deg);
-    -moz-transform: rotate(296deg);
-    -ms-transform: rotate(296deg);
-    -o-transform: rotate(296deg);
+    transform: rotate(297deg);
+    -webkit-transform: rotate(297deg);
+    -moz-transform: rotate(297deg);
+    -ms-transform: rotate(297deg);
+    -o-transform: rotate(297deg);
 }
 
 @keyframes chickenIn {
@@ -2561,6 +2562,37 @@ sub {
     height: 55px;
 }
 
+.giveaway {
+    position: absolute;
+    right: 15px;
+    top: 262px;
+    width: 305px;
+    height: 305px;
+    z-index: 450;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.giveaway>.background {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    width: 97%;
+    height: 98%;
+    background-image: url("https://pewpew.pt/gfx/prodigy/GIVEAWAY");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.giveaway>.glow {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 96%;
+    height: 96%;
+}
+
 .map_picks {
     position: absolute;
     /*background: rgba(0, 0, 0, 0); */
@@ -2616,17 +2648,14 @@ sub {
     width: 270px;
     height: 100%;
     z-index: 50;
-    clip-path: polygon(1% 0, 115% 0, 100% 100%, 11% 100%);
+    clip-path: polygon(0 0, 115% 0, 100% 100%, 11% 100%);
 }
 
 .map_picks>.decider_map>.back {
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+    width: 102%;
+    height: 102%;
     background-image: url(../../files/img/hud_elements/back.png);
     opacity: 0.4;
-    background-position: center;
-    background-size: 100%;
 }
 
 .map_picks>.first_map>.text_container {
@@ -5482,6 +5511,26 @@ sup {
     -moz-transition: all 0.875s ease 0.125s !important;
     -ms-transition: all 0.875s ease 0.125s !important;
     -o-transition: all 0.875s ease 0.125s !important;
+}
+
+.show_giveaway {
+    transition: all 0.5s ease 0s !important;
+    opacity: 1 !important;
+    transform: translate(0px, 0px) !important;
+    -webkit-transform: translate(0px, 0px) !important;
+    -moz-transform: translate(0px, 0px) !important;
+    -ms-transform: translate(0px, 0px) !important;
+    -o-transform: translate(0px, 0px) !important;
+}
+
+.hide_giveaway {
+    transition: all 0.5s ease 0s !important;
+    opacity: 0 !important;
+    transform: translate(100px, 0px) !important;
+    -webkit-transform: translate(100px, 0px) !important;
+    -moz-transform: translate(100px, 0px) !important;
+    -ms-transform: translate(100px, 0px) !important;
+    -o-transform: translate(100px, 0px) !important;
 }
 
 .show_spam {
