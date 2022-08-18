@@ -4,7 +4,7 @@ body {
     padding: 0;
     color: #fff;
     overflow: hidden;
-    background: blanchedalmond;
+    /*background: blanchedalmond;*/
     border-radius: 0px !important;
     font-family: "";
     font-weight: 500;
@@ -967,7 +967,7 @@ sub {
     position: absolute;
     right: 75px;
     top: 19.5px;
-    width: 170px;
+    width: 220px;
     height: 34px;
     z-index: 36;
     overflow: hidden;
@@ -1061,7 +1061,7 @@ sub {
     position: absolute;
     left: 75px;
     top: 19.5px;
-    width: 170px;
+    width: 220px;
     height: 34px;
     z-index: 36;
     overflow: hidden;
