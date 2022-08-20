@@ -1466,9 +1466,7 @@ function updatePage(data) {
 
     /* EQUIPMENT MONEY FINITO*/
     for (i = 0; i <= 30; i++) {
-        //$(".round_winner>.team_right_" + i + "").css("box-shadow", "inset 0 15px 10px  rgba(0,0,0,0.15)");
         $(".round_winner>.team_right_" + i + ">.result ").css("background-image", "none");
-        //$(".round_winner>.team_left_" + i + "").css("box-shadow", "inset 0 -15px 10px  rgba(0,0,0,0.15)");
         $(".round_winner>.team_left_" + i + ">.result ").css("background-image", "none");
         $(".round_winner>.rounds_" + i).css("background-color", "rgba(0,0,0,0)");
         $(".round_winner>.team_right_" + i).css("height", "32px");
@@ -1476,17 +1474,17 @@ function updatePage(data) {
     }
 
     var total_rounds = teams.left.score + teams.right.score;
-    if (total_rounds <= 15) {
+    if (total_rounds < 15) {
         $(".round_winner>.left_side_2").css("box-shadow", "inset 0px 0px 25px 3px rgb(" + t_color + ")");
         $(".round_winner>.left_side_1").css("box-shadow", "inset 0px 0px 25px 3px rgb(" + ct_color + ")");
     } else {
         $(".round_winner>.left_side_1").css("box-shadow", "inset 0px 0px 25px 3px rgb(" + t_color + ")");
         $(".round_winner>.left_side_2").css("box-shadow", "inset 0px 0px 25px 3px rgb(" + ct_color + ")");
-    }
+    } 
 
     var flag = 0;
     for (i = 0; i < result.length; i++) {
-        if (total_rounds <= 15) {
+        if (total_rounds < 15) {
             nr = i + 1;
             $(".round_winner>.rounds_" + nr).html(nr);
             $(".round_winner>.rounds_" + nr).css("font-size", "10px");
@@ -1514,7 +1512,6 @@ function updatePage(data) {
                         $(".round_winner>.team_right_" + nr + ">.result ").css("background-image", "url(../../files/img/deaths.png)");
                     } else if (round_wins[nr].startsWith('t_win_bomb')) {
                         $(".round_winner>.team_right_" + nr + ">.result ").css("background-image", "url(/files/img/elements/bomb.png");
-                        //$(".round_winner>.team_right_" + nr + ">.result ").css("filter", "invert(1)");
                     }
                 } else {
                     $(".round_winner>.team_right_" + nr + "").css("box-shadow", "inset 0 15px 10px  rgba(0,0,0,0.15)");
@@ -1524,6 +1521,13 @@ function updatePage(data) {
         } else if (total_rounds <= 30) {
             nr = i + 1;
             real_round = i + 16;
+            if(real_round <= 17){
+                for(j = 0; j < 16; j++){
+                    $(".round_winner>.team_left_" + j).css("box-shadow", "inset 0 -0px 0px  rgba(" + ct_color + ",0)");
+                    $(".round_winner>.team_right_" + j).css("box-shadow", "inset 0 0px 0px  rgba(" + t_color + ",0)");
+                } 
+            }
+
             $(".round_winner>.rounds_" + nr).html(real_round);
             $(".round_winner>.rounds_" + nr).css("font-size", "10px");
             $(".round_winner>.rounds_" + nr).css("line-height", "1.4");
@@ -1550,7 +1554,6 @@ function updatePage(data) {
                         $(".round_winner>.team_left_" + nr + ">.result ").css("background-image", "url(../../files/img/deaths.png)");
                     } else if (round_wins[nr].startsWith('t_win_bomb')) {
                         $(".round_winner>.team_left_" + nr + ">.result ").css("background-image", "url(/files/img/elements/bomb.png");
-                        //$(".round_winner>.team_right_" + nr + ">.result ").css("filter", "invert(1)");
                     }
                 } else {
                     $(".round_winner>.team_left_" + nr + "").css("box-shadow", "inset 0 15px 10px  rgba(0,0,0,0.15)");
