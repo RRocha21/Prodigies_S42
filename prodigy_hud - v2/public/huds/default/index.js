@@ -167,7 +167,7 @@ function fillObserved(player) {
         $(".observed_container>.observed_bar>.kda_container>.assists>.a").css("color", "rgb(" + ct_color + ")");
         $(".observed_container>.observed_bar>.kda_container>.deaths>.d").css("color", "rgb(" + ct_color + ")");
         $(".observed_container>.health").css("color", "rgb(" + ct_color + ")");
-        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgb(25, 25, 25) 0%, rgb(" + ct_color + ") 150px, rgb(" + ct_color + ") 100%");
+        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgb(25, 25, 25, 0.4) 0%, rgba(" + ct_color + ",0.8) 75px, rgb(" + ct_color + ") 100%");
         $(".observed_container>.life_container>.life_bar").css("width", statistics.health + "%");
         $(".observed_container>.bomb_defuse").html(statistics.defusekit ? $("<img width='25px' />").attr("src", "/files/img/elements/defuse.png") : "");
         //$(".observed_container>.name").css("color", "rgb(" + ct_color + ")");
@@ -188,7 +188,7 @@ function fillObserved(player) {
         $(".observed_container>.observed_bar>.kda_container>.assists>.a").css("color", "rgb(" + ct_color + ")");
         $(".observed_container>.observed_bar>.kda_container>.deaths>.d").css("color", "rgb(" + ct_color + ")");
         $(".observed_container>.health").css("color", "rgb(" + ct_color + ")");
-        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgba(25, 25, 25) 0%, rgb(" + ct_color + ") 150px, rgb(" + ct_color + ") 100%");
+        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgb(25, 25, 25, 0.4) 0%, rgba(" + ct_color + ",0.8) 75px, rgb(" + ct_color + ") 100%");
         $(".observed_container>.life_container>.life_bar").css("width", statistics.health + "%");
         $(".observed_container>.bomb_defuse").html(statistics.defusekit ? $("<img width='25px' />").attr("src", "/files/img/elements/defuse.png") : "");
         //$(".observed_container>.name").css("color", "rgb(" + ct_color + ")");
@@ -208,7 +208,7 @@ function fillObserved(player) {
         $(".observed_container>.observed_bar>.kda_container>.kills>.k").css("color", "rgb(" + t_color + ")");
         $(".observed_container>.observed_bar>.kda_container>.assists>.a").css("color", "rgb(" + t_color + ")");
         $(".observed_container>.observed_bar>.kda_container>.deaths>.d").css("color", "rgb(" + t_color + ")");
-        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgb(25, 25, 25) 0%, rgb(" + t_color + ") 150px, rgb(" + t_color + ") 100%");
+        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgb(25, 25, 25, 0.4) 0%, rgba(" + t_color + ",0.8) 75px, rgb(" + t_color + ") 100%");
         $(".observed_container>.life_container>.life_bar").css("width", statistics.health + "%");
         //$(".observed_container>.name").css("color", "rgb(" + t_color + ")");
         $(".observed_container>.health").css("color", "rgb(" + t_color + ")");
@@ -228,7 +228,7 @@ function fillObserved(player) {
         $(".observed_container>.observed_bar>.kda_container>.kills>.k").css("color", "rgb(" + t_color + ")");
         $(".observed_container>.observed_bar>.kda_container>.assists>.a").css("color", "rgb(" + t_color + ")");
         $(".observed_container>.observed_bar>.kda_container>.deaths>.d").css("color", "rgb(" + t_color + ")");
-        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgb(25, 25, 25) 0%, rgb(" + t_color + ") 150px, rgb(" + t_color + ") 100%");
+        $(".observed_container>.life_container>.life_bar").css("background", "linear-gradient(90deg, rgb(25, 25, 25, 0.4) 0%, rgba(" + t_color + ",0.8) 75px, rgb(" + t_color + ") 100%");
         $(".observed_container>.life_container>.life_bar").css("width", statistics.health + "%");
         $(".observed_container>.bomb_defuse").html(statistics.bomb ? $("<img width='25px' />").attr("src", "/files/img/elements/defuse.png") : "");
         $(".observed_container>.health").css("color", "rgb(" + t_color + ")");
@@ -1480,7 +1480,7 @@ function updatePage(data) {
     } else {
         $(".round_winner>.left_side_1").css("box-shadow", "inset 0px 0px 25px 3px rgb(" + t_color + ")");
         $(".round_winner>.left_side_2").css("box-shadow", "inset 0px 0px 25px 3px rgb(" + ct_color + ")");
-    } 
+    }
 
     var flag = 0;
     for (i = 0; i < result.length; i++) {
@@ -1521,11 +1521,11 @@ function updatePage(data) {
         } else if (total_rounds <= 30) {
             nr = i + 1;
             real_round = i + 16;
-            if(real_round <= 17){
-                for(j = 0; j < 16; j++){
-                    $(".round_winner>.team_left_" + j).css("box-shadow", "inset 0 -0px 0px  rgba(" + ct_color + ",0)");
-                    $(".round_winner>.team_right_" + j).css("box-shadow", "inset 0 0px 0px  rgba(" + t_color + ",0)");
-                } 
+            if (total_rounds < 16) {
+                for (j = 0; j < 16; j++) {
+                    $(".round_winner>.team_left_" + j + "").css("box-shadow", "inset 0 0px 0px  rgba(" + ct_color + "0)");
+                    $(".round_winner>.team_right_" + j + "").css("box-shadow", "inset 0 0px 0px  rgba(" + t_color + "0)");
+                }
             }
 
             $(".round_winner>.rounds_" + nr).html(real_round);
