@@ -8,6 +8,9 @@ body {
     border-radius: 0px !important;
     font-family: "";
     font-weight: 500;
+    cursor: none;
+    pointer-events: none;
+    user-select: none;
 }
 
 sub {
