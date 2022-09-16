@@ -9,28 +9,23 @@ var start_money = {};
 var wl_teama = "";
 var wl_teamb = "";
 
-
-
-var map1 = "vertigo"; // Map 1 Name
-var map2 = "dust2"; // Map 2 Name
-var map3 = "inferno"; // Map 3 Name
+var map1 = ""; // Map 1 Name
+var map2 = ""; // Map 2 Name
+var map3 = ""; // Map 3 Name
 var map4 = ""; // Map 4 Name
 var map5 = ""; // Map 5 Name
-var playing = "3" // Values: 1-5
+var map1_res1 = 0;
+var map1_res2 = 0;
+var map2_res1 = 0;
+var map2_res2 = 0;
+var map3_res1 = 0;
+var map3_res2 = 0;
+var swapsides = 0;
 var pick = "DECIDER"; // Current map pick
 
-var swappicksides = 0;
+var playing = 2;
 
-var map1_res1 = 16;
-var map1_res2 = 14;
-
-var map2_res1 = 16;
-var map2_res2 = 2;
-
-var map3_res1 = 11;
-var map3_res2 = 1;
-
-var bo = 1;
+var bo = 3;
 
 var flag_replays = 1;
 
@@ -571,13 +566,13 @@ function fillPlayer(player, nr, side, max) {
 
     if (side == "left") {
         if (team == "ct") {
-            health_color = "linear-gradient(-90deg, rgba(" + ct_color + ", 1) 0px, rgba(" + ct_color + ", 0.9) 143px, rgba(" + ct_color + ", 0.3) 330px)";
+            health_color = "linear-gradient(90deg, rgba(" + ct_color + ", 0.3) 0px, rgba(" + ct_color + ", 0.85) 143px, rgba(" + ct_color + ", 1) 330px)";
             $(".left_series").find(".block").css("border-color", "rgba(" + dark_ct_color + " ,1)");
             $(".left_series").find(".win").css("background", "rgba(" + ct_color + ", 1)");
             $(".left_series").find(".win").css("box-shadow", "rgba(" + dark_ct_color + ", 1) 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
         } else {
-            health_color = "linear-gradient(-90deg, rgba(" + t_color + ", 1) 0px, rgba(" + t_color + ", 0.9) 143px, rgba(" + t_color + ", 0.3) 330px)";
+            health_color = "linear-gradient(90deg, rgba(" + t_color + ", 0.3) 0px, rgba(" + t_color + ", 0.9) 143px, rgba(" + t_color + ", 1) 330px)";
             $(".left_series").find(".block").css("border-color", "rgba(" + dark_t_color + ",1)");
             $(".left_series").find(".win").css("background", "rgba(" + t_color + ",1)");
             $(".left_series").find(".win").css("box-shadow", "rgba(" + dark_t_color + ",1) 0px 0px 15px 3px");
@@ -855,6 +850,22 @@ function updatePage(data) {
 
     var matchup = data.getMatchType();
     var match = data.getMatch();
+
+    map1 = match.map_pick.map1; // Map 1 Name
+    map2 = match.map_pick.map2; // Map 2 Name
+    map3 = match.map_pick.map3; // Map 3 Name
+    current_map = match.map_pick.map_current;
+    swapsides = match.map_pick.sides_swap;
+
+
+    map1_res1 = match.map_1_res.map_left_res;
+    map1_res2 = match.map_1_res.map_right_res;
+    map2_res1 = match.map_2_res.map_left_res;
+    map2_res2 = match.map_2_res.map_right_res;
+    map3_res1 = match.map_3_res.map_left_res;
+    map3_res2 = match.map_3_res.map_right_res;
+
+
     if (matchup && matchup.toLowerCase() != "none") {
 
 
@@ -893,7 +904,6 @@ function updatePage(data) {
     var map = data.map();
     var previously = data.previously();
 
-    var map3 = map.name.slice(3);
     var round_now = map.round + (round.phase == "over" || round.phase == "intermission" ?
         0 :
         1);
@@ -1158,9 +1168,8 @@ function updatePage(data) {
 
 
     /* MAP PICKS START  */
-
-    if (swappicksides == 0) {
-
+    console.log(swapsides);
+    if (swapsides == 0) {
         $(".map_picks>.first_map>.text_container").html("<font color='#fff'>" + teams.left.name + "</font>");
         $(".map_picks>.first_map>.text_container").css("background", "rgba(" + left_color + ", 0.8)");
         $(".map_picks>.first_map").css("background-image", "url(../../files/img/maps/" + map1 + ".jpg)");
@@ -1168,14 +1177,14 @@ function updatePage(data) {
         $(".map_picks>.first_map>.text_container_2").html("<font color='#fff'>" + map1 + "</font>");
         $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
 
-        if (playing == 1) {
+        if (current_map == 1) {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'> CURRENT </font>");
             $(".map_picks>.first_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.2");
             $(".map_picks>.first_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + left_color + ",0.6)");
         } else {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
-            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.05");
         }
 
@@ -1185,45 +1194,44 @@ function updatePage(data) {
         $(".map_picks>.second_map").css("border", "solid 4px rgb(" + right_color + ")");
         $(".map_picks>.second_map>.text_container_2").html("<font color='#fff'>" + map2 + "</font>");
 
-        if (playing == 2) {
+        if (current_map == 2) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
             $(".map_picks>.second_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + right_color + ",0.6)");
-        } else if (playing == 1) {
+        } else if (current_map == 1) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'> NEXT </font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
         } else {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>" + map2_res1 + " - " + map2_res2 + "</font>");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.05");
         }
 
         $(".map_picks>.decider_map>.text_container").html("<font color='#fff'> DECIDER </font>");
-        $(".map_picks>.decider_map>.text_container").css("background", "rgba(3,16,35, 0.8)");
+        $(".map_picks>.decider_map>.text_container").css("background", "rgba(0,0,0, 0.8)");
         $(".map_picks>.decider_map").css("background-image", "url(../../files/img/maps/" + map3 + ".jpg)");
-        $(".map_picks>.decider_map").css("border", "solid 4px rgb(3,16,35)");
+        $(".map_picks>.decider_map").css("border", "solid 4px rgb(0,0,0)");
         $(".map_picks>.decider_map>.text_container_2").html("<font color='#fff'>" + map3 + "</font>");
 
-        if (playing == 2) {
+        if (current_map == 2) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>NEXT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
-        } else if (playing == 1) {
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+        } else if (current_map == 1) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'></font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
         } else {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(3,16,35,0.45)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(0,0,0,0.45)");
         }
-
     } else {
         $(".map_picks>.first_map>.text_container").html("<font color='#fff'>" + teams.right.name + "</font>");
         $(".map_picks>.first_map>.text_container").css("background", "rgba(" + right_color + ", 0.8)");
@@ -1232,23 +1240,14 @@ function updatePage(data) {
         $(".map_picks>.first_map>.text_container_2").html("<font color='#fff'>" + map1 + "</font>");
         $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
 
-
-
-        $(".map_picks>.first_map>.text_container").html("<font color='#fff'>" + teams.right.name + "</font>");
-        $(".map_picks>.first_map>.text_container").css("background", "rgba(" + right_color + ", 0.8)");
-        $(".map_picks>.first_map").css("background-image", "url(../../files/img/maps/" + map1 + ".jpg)");
-        $(".map_picks>.first_map").css("border", "solid 4px rgb(" + right_color + ")");
-        $(".map_picks>.first_map>.text_container_2").html("<font color='#fff'>" + map1 + "</font>");
-        $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
-
-        if (playing == 1) {
+        if (current_map == 1) {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'> CURRENT </font>");
             $(".map_picks>.first_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.2");
             $(".map_picks>.first_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + right_color + ",0.6)");
         } else {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
-            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.05");
         }
 
@@ -1258,45 +1257,46 @@ function updatePage(data) {
         $(".map_picks>.second_map").css("border", "solid 4px rgb(" + left_color + ")");
         $(".map_picks>.second_map>.text_container_2").html("<font color='#fff'>" + map2 + "</font>");
 
-        if (playing == 2) {
+        if (current_map == 2) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
             $(".map_picks>.second_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + left_color + ",0.6)");
-        } else if (playing == 1) {
+        } else if (current_map == 1) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'> NEXT </font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
         } else {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>" + map2_res1 + " - " + map2_res2 + "</font>");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.05");
         }
 
         $(".map_picks>.decider_map>.text_container").html("<font color='#fff'> DECIDER </font>");
-        $(".map_picks>.decider_map>.text_container").css("background", "rgba(3,16,35, 0.8)");
+        $(".map_picks>.decider_map>.text_container").css("background", "rgba(0,0,0, 0.8)");
         $(".map_picks>.decider_map").css("background-image", "url(../../files/img/maps/" + map3 + ".jpg)");
-        $(".map_picks>.decider_map").css("border", "solid 4px rgb(3,16,35)");
+        $(".map_picks>.decider_map").css("border", "solid 4px rgb(0,0,0)");
         $(".map_picks>.decider_map>.text_container_2").html("<font color='#fff'>" + map3 + "</font>");
 
-        if (playing == 2) {
+        if (current_map == 2) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>NEXT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
-        } else if (playing == 1) {
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+        } else if (current_map == 1) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'></font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(3,16,35,0.8)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
         } else {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(3,16,35,0.45)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(0,0,0,0.45)");
         }
     }
+
     $(".round_winner>.rounds").html("<font color='#fff'>1</font>");
     /* MAP PICKS FINITO  */
 
