@@ -2617,9 +2617,9 @@ sub {
     background-position: center;
     background-size: 300px 169px;
     position: absolute;
-    left: 0px;
+    left: -71px;
     top: 0px;
-    width: 33.333%;
+    width: 45%;
     height: 100%;
     z-index: 200;
     /* border-radius: 10px; */
@@ -2627,6 +2627,7 @@ sub {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;*/
+    clip-path: polygon(3% 0, 87% 0, 97% 100%, 13% 100%);
 }
 
 .map_picks>.second_map {
@@ -2634,11 +2635,12 @@ sub {
     background-position: center;
     background-size: 300px 169px;
     position: absolute;
-    left: 33.333%;
+    left: 79px;
     top: 0px;
-    width: 33.333%;
+    width: 45%;
     height: 100%;
     z-index: 100;
+    clip-path: polygon(3% 0, 87% 0, 97% 100%, 13% 100%);
 }
 
 .map_picks>.decider_map {
@@ -2646,11 +2648,12 @@ sub {
     background-position: center;
     background-size: 300px 169px;
     position: absolute;
-    right: 0px;
+    right: -25px;
     top: 0px;
-    width: 33.333%;
+    width: 45%;
     height: 100%;
     z-index: 50;
+    clip-path: polygon(3% 0, 87% 0, 97% 100%, 13% 100%);
 }
 
 .map_picks>.decider_map>.back {
@@ -2680,6 +2683,7 @@ sub {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     overflow: hidden;
+    clip-path: polygon(4% 0, 96% 0, 93% 100%, 7% 100%);
 }
 
 .map_picks>.first_map>.text_container_2 {
@@ -2743,6 +2747,7 @@ sub {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     overflow: hidden;
+    clip-path: polygon(4% 0, 96% 0, 93% 100%, 7% 100%);
 }
 
 .map_picks>.second_map>.text_container_2 {
@@ -2805,6 +2810,7 @@ sub {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    clip-path: polygon(4% 0, 96% 0, 93% 100%, 7% 100%);
 }
 
 .map_picks>.decider_map>.text_container_2 {
