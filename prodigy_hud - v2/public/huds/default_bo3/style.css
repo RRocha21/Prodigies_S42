@@ -509,43 +509,43 @@ sub {
     top: -5px;
     width: 1000px;
     height: 86px;
-    z-index: 49;
+    z-index: 490;
     /*-webkit-mask-image: linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 100%);
 */
 }
 
 .header_container>.left_series {
     position: absolute;
-    left: 55px;
-    top: 25px;
+    left: 310px;
+    top: 21px;
     width: 17px;
     height: 45px;
-    z-index: 50;
+    z-index: 490;
 }
 
 .block {
     margin-bottom: 7px;
     width: 25px;
     height: 15px;
-    border: solid 1px;
-    z-index: 51;
+    border: solid 3px;
+    z-index: 491;
 }
 
 .block.win {
     margin-bottom: 7px;
     width: 25px;
     height: 15px;
-    border: solid 1px;
-    z-index: 51;
+    border: solid 3px;
+    z-index: 491;
 }
 
 .header_container>.right_series {
     position: absolute;
-    right: 65px;
-    top: 25px;
+    right: 320px;
+    top: 21px;
     width: 17px;
     height: 45px;
-    z-index: 50;
+    z-index: 490;
 }
 
 .header_container>.left_line {
@@ -745,10 +745,10 @@ sub {
     text-transform: uppercase;
     line-height: 1.2;
     position: absolute;
-    left: 12px;
+    left: 0px;
     top: 24px;
     position: absolute;
-    width: 300;
+    width: 280px;
     height: 40px;
     z-index: 57;
     text-align: right;
@@ -763,10 +763,10 @@ sub {
     text-transform: uppercase;
     line-height: 1.2;
     position: absolute;
-    right: 12px;
+    right: 0px;
     top: 24px;
     position: absolute;
-    width: 300px;
+    width: 280px;
     height: 40px;
     z-index: 57;
     text-align: left;
@@ -781,7 +781,7 @@ sub {
     text-transform: uppercase;
     line-height: 1.4;
     position: absolute;
-    left: 310px;
+    left: 320px;
     top: 0px;
     position: absolute;
     width: 86px;
@@ -2617,7 +2617,7 @@ sub {
     background-position: center;
     background-size: 300px 169px;
     position: absolute;
-    left: -71px;
+    left: -78px;
     top: 0px;
     width: 45%;
     height: 100%;
@@ -2648,7 +2648,7 @@ sub {
     background-position: center;
     background-size: 300px 169px;
     position: absolute;
-    right: -25px;
+    right: -23px;
     top: 0px;
     width: 45%;
     height: 100%;

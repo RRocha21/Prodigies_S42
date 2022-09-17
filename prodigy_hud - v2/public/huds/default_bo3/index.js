@@ -551,15 +551,15 @@ function fillPlayer(player, nr, side, max) {
     if (side == "right") {
         if (team == "ct") {
             health_color = "linear-gradient(-90deg, rgba(" + ct_color + ", 0.3) 0px, rgba(" + ct_color + ", 0.9) 143px, rgba(" + ct_color + ", 1) 330px)";
-            $(".right_series").find(".block").css("border-color", "rgba(" + dark_ct_color + " ,1)");
-            $(".right_series").find(".win").css("background", "rgba(" + ct_color + " ,1)");
-            $(".right_series").find(".win").css("box-shadow", "rgba(" + dark_ct_color + ",1) 0px 0px 15px 3px");
+            $(".header_container>.right_series").find(".block").css("border-color", "rgba(" + dark_ct_color + " ,1)");
+            $(".header_container>.right_series").find(".win").css("background", "rgba(" + ct_color + " ,1)");
+            $(".header_container>.right_series").find(".win").css("box-shadow", "rgba(" + dark_ct_color + ",1) 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
         } else {
             health_color = "linear-gradient(-90deg, rgba(" + t_color + ", 0.3) 0px, rgba(" + t_color + ", 0.9) 143px, rgba(" + t_color + ", 1) 330px)";
-            $(".right_series").find(".block").css("border-color", "rgba(" + dark_t_color + ",1)");
-            $(".right_series").find(".win").css("background", "rgba(" + t_color + ",1)");
-            $(".right_series").find(".win").css("box-shadow", "rgba(" + dark_t_color + ",1) 0px 0px 15px 3px");
+            $(".header_container>.right_series").find(".block").css("border-color", "rgba(" + dark_t_color + ",1)");
+            $(".header_container>.right_series").find(".win").css("background", "rgba(" + t_color + ",1)");
+            $(".header_container>.right_series").find(".win").css("box-shadow", "rgba(" + dark_t_color + ",1) 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
         }
     }
@@ -567,15 +567,15 @@ function fillPlayer(player, nr, side, max) {
     if (side == "left") {
         if (team == "ct") {
             health_color = "linear-gradient(90deg, rgba(" + ct_color + ", 0.3) 0px, rgba(" + ct_color + ", 0.85) 143px, rgba(" + ct_color + ", 1) 330px)";
-            $(".left_series").find(".block").css("border-color", "rgba(" + dark_ct_color + " ,1)");
-            $(".left_series").find(".win").css("background", "rgba(" + ct_color + ", 1)");
-            $(".left_series").find(".win").css("box-shadow", "rgba(" + dark_ct_color + ", 1) 0px 0px 15px 3px");
+            $(".header_container>.left_series").find(".block").css("border-color", "rgba(" + dark_ct_color + " ,1)");
+            $(".header_container>.left_series").find(".win").css("background", "rgba(" + ct_color + ", 1)");
+            $(".header_container>.left_series").find(".win").css("box-shadow", "rgba(" + dark_ct_color + ", 1) 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
         } else {
             health_color = "linear-gradient(90deg, rgba(" + t_color + ", 0.3) 0px, rgba(" + t_color + ", 0.9) 143px, rgba(" + t_color + ", 1) 330px)";
-            $(".left_series").find(".block").css("border-color", "rgba(" + dark_t_color + ",1)");
-            $(".left_series").find(".win").css("background", "rgba(" + t_color + ",1)");
-            $(".left_series").find(".win").css("box-shadow", "rgba(" + dark_t_color + ",1) 0px 0px 15px 3px");
+            $(".header_container>.left_series").find(".block").css("border-color", "rgba(" + dark_t_color + ",1)");
+            $(".header_container>.left_series").find(".win").css("background", "rgba(" + t_color + ",1)");
+            $(".header_container>.left_series").find(".win").css("box-shadow", "rgba(" + dark_t_color + ",1) 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
         }
     }
@@ -877,8 +877,8 @@ function updatePage(data) {
             block.clone().appendTo(right_bl).addClass(match.team_2.map_score > x ? "win" : "");
         }
 
-        $(".Top_Bar>.Team_A>.BO_5").html(left_bl);
-        $(".Top_Bar>.Team_B>.BO_5").html(right_bl);
+        $(".header_container .left_series").html(left_bl);
+        $(".header_container .right_series").html(right_bl);
 
         $(".block").css("display", "-webkit-inline-box");
         $("#ticker_text").text("BEST OF " + matchup.substr(2));
@@ -1171,7 +1171,7 @@ function updatePage(data) {
     console.log(swapsides);
     if (swapsides == 0) {
         $(".map_picks>.first_map>.text_container").html("<font color='#fff'>" + teams.left.name + "</font>");
-        $(".map_picks>.first_map>.text_container").css("background", "rgba(" + left_color + ", 0.8)");
+        $(".map_picks>.first_map>.text_container").css("background", "rgba(" + left_color + ", 0.4)");
         $(".map_picks>.first_map").css("background-image", "url(../../files/img/maps/" + map1 + ".jpg)");
         $(".map_picks>.first_map").css("border", "solid 4px rgb(" + left_color + ")");
         $(".map_picks>.first_map>.text_container_2").html("<font color='#fff'>" + map1 + "</font>");
@@ -1181,15 +1181,15 @@ function updatePage(data) {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'> CURRENT </font>");
             $(".map_picks>.first_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.first_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + left_color + ",0.6)");
+            $(".map_picks>.first_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + left_color + ",0.4)");
         } else {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
-            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.05");
         }
 
         $(".map_picks>.second_map>.text_container").html("<font color='#fff'> " + teams.right.name + " </font>");
-        $(".map_picks>.second_map>.text_container").css("background", "rgba(" + right_color + ", 0.8)");
+        $(".map_picks>.second_map>.text_container").css("background", "rgba(" + right_color + ", 0.4)");
         $(".map_picks>.second_map").css("background-image", "url(../../files/img/maps/" + map2 + ".jpg)");
         $(".map_picks>.second_map").css("border", "solid 4px rgb(" + right_color + ")");
         $(".map_picks>.second_map>.text_container_2").html("<font color='#fff'>" + map2 + "</font>");
@@ -1198,20 +1198,20 @@ function updatePage(data) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + right_color + ",0.6)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + right_color + ",0.4)");
         } else if (current_map == 1) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'> NEXT </font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
         } else {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>" + map2_res1 + " - " + map2_res2 + "</font>");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.05");
         }
 
         $(".map_picks>.decider_map>.text_container").html("<font color='#fff'> DECIDER </font>");
-        $(".map_picks>.decider_map>.text_container").css("background", "rgba(0,0,0, 0.8)");
+        $(".map_picks>.decider_map>.text_container").css("background", "rgba(0,0,0, 0.4)");
         $(".map_picks>.decider_map").css("background-image", "url(../../files/img/maps/" + map3 + ".jpg)");
         $(".map_picks>.decider_map").css("border", "solid 4px rgb(0,0,0)");
         $(".map_picks>.decider_map>.text_container_2").html("<font color='#fff'>" + map3 + "</font>");
@@ -1220,21 +1220,21 @@ function updatePage(data) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>NEXT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
         } else if (current_map == 1) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'></font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
         } else {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(0,0,0,0.45)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(0,0,0,0.4)");
         }
     } else {
         $(".map_picks>.first_map>.text_container").html("<font color='#fff'>" + teams.right.name + "</font>");
-        $(".map_picks>.first_map>.text_container").css("background", "rgba(" + right_color + ", 0.8)");
+        $(".map_picks>.first_map>.text_container").css("background", "rgba(" + right_color + ", 0.4)");
         $(".map_picks>.first_map").css("background-image", "url(../../files/img/maps/" + map1 + ".jpg)");
         $(".map_picks>.first_map").css("border", "solid 4px rgb(" + right_color + ")");
         $(".map_picks>.first_map>.text_container_2").html("<font color='#fff'>" + map1 + "</font>");
@@ -1244,15 +1244,15 @@ function updatePage(data) {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'> CURRENT </font>");
             $(".map_picks>.first_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.first_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + right_color + ",0.6)");
+            $(".map_picks>.first_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + right_color + ",0.4)");
         } else {
             $(".map_picks>.first_map>.text_container_3").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
-            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.first_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
             $(".map_picks>.first_map>.text_container_3").css("line-height", "1.05");
         }
 
         $(".map_picks>.second_map>.text_container").html("<font color='#fff'> " + teams.left.name + " </font>");
-        $(".map_picks>.second_map>.text_container").css("background", "rgba(" + left_color + ", 0.8)");
+        $(".map_picks>.second_map>.text_container").css("background", "rgba(" + left_color + ", 0.4)");
         $(".map_picks>.second_map").css("background-image", "url(../../files/img/maps/" + map2 + ".jpg)");
         $(".map_picks>.second_map").css("border", "solid 4px rgb(" + left_color + ")");
         $(".map_picks>.second_map>.text_container_2").html("<font color='#fff'>" + map2 + "</font>");
@@ -1261,20 +1261,20 @@ function updatePage(data) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + left_color + ",0.6)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -45px 45px  rgba(" + left_color + ",0.4)");
         } else if (current_map == 1) {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'> NEXT </font>");
             $(".map_picks>.second_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
         } else {
             $(".map_picks>.second_map>.text_container_3").html("<font color='#fff'>" + map2_res1 + " - " + map2_res2 + "</font>");
-            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.second_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
             $(".map_picks>.second_map>.text_container_3").css("line-height", "1.05");
         }
 
         $(".map_picks>.decider_map>.text_container").html("<font color='#fff'> DECIDER </font>");
-        $(".map_picks>.decider_map>.text_container").css("background", "rgba(0,0,0, 0.8)");
+        $(".map_picks>.decider_map>.text_container").css("background", "rgba(0,0,0, 0.4)");
         $(".map_picks>.decider_map").css("background-image", "url(../../files/img/maps/" + map3 + ".jpg)");
         $(".map_picks>.decider_map").css("border", "solid 4px rgb(0,0,0)");
         $(".map_picks>.decider_map>.text_container_2").html("<font color='#fff'>" + map3 + "</font>");
@@ -1283,17 +1283,17 @@ function updatePage(data) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>NEXT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
         } else if (current_map == 1) {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'></font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.8)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -50px 50px  rgba(0,0,0,0.4)");
         } else {
             $(".map_picks>.decider_map>.text_container_3").html("<font color='#fff'>CURRENT</font>");
             $(".map_picks>.decider_map>.text_container_3").css("font-size", "19px");
             $(".map_picks>.decider_map>.text_container_3").css("line-height", "1.2");
-            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(0,0,0,0.45)");
+            $(".map_picks>.decider_map").css("box-shadow", "inset 0 -45px 45px  rgba(0,0,0,0.4)");
         }
     }
 
