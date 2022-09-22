@@ -517,7 +517,7 @@ sub {
 .header_container>.left_series {
     position: absolute;
     left: 310px;
-    top: 21px;
+    top: 25px;
     width: 17px;
     height: 45px;
     z-index: 490;
@@ -525,24 +525,24 @@ sub {
 
 .block {
     margin-bottom: 7px;
-    width: 25px;
-    height: 15px;
+    width: 22px;
+    height: 12px;
     border: solid 3px;
     z-index: 491;
 }
 
 .block.win {
     margin-bottom: 7px;
-    width: 25px;
-    height: 15px;
+    width: 22px;
+    height: 12px;
     border: solid 3px;
     z-index: 491;
 }
 
 .header_container>.right_series {
     position: absolute;
-    right: 320px;
-    top: 21px;
+    right: 310px;
+    top: 25px;
     width: 17px;
     height: 45px;
     z-index: 490;

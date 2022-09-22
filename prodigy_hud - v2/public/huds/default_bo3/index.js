@@ -551,13 +551,13 @@ function fillPlayer(player, nr, side, max) {
     if (side == "right") {
         if (team == "ct") {
             health_color = "linear-gradient(-90deg, rgba(" + ct_color + ", 0.3) 0px, rgba(" + ct_color + ", 0.9) 143px, rgba(" + ct_color + ", 1) 330px)";
-            $(".header_container>.right_series").find(".block").css("border-color", "rgba(" + dark_ct_color + " ,1)");
+            $(".header_container>.right_series").find(".block").css("border-color", "rgba(" + ct_color + " ,1)");
             $(".header_container>.right_series").find(".win").css("background", "rgba(" + ct_color + " ,1)");
             $(".header_container>.right_series").find(".win").css("box-shadow", "rgba(" + dark_ct_color + ",1) 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
         } else {
             health_color = "linear-gradient(-90deg, rgba(" + t_color + ", 0.3) 0px, rgba(" + t_color + ", 0.9) 143px, rgba(" + t_color + ", 1) 330px)";
-            $(".header_container>.right_series").find(".block").css("border-color", "rgba(" + dark_t_color + ",1)");
+            $(".header_container>.right_series").find(".block").css("border-color", "rgba(" + t_color + ",1)");
             $(".header_container>.right_series").find(".win").css("background", "rgba(" + t_color + ",1)");
             $(".header_container>.right_series").find(".win").css("box-shadow", "rgba(" + dark_t_color + ",1) 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
@@ -567,13 +567,13 @@ function fillPlayer(player, nr, side, max) {
     if (side == "left") {
         if (team == "ct") {
             health_color = "linear-gradient(90deg, rgba(" + ct_color + ", 0.3) 0px, rgba(" + ct_color + ", 0.85) 143px, rgba(" + ct_color + ", 1) 330px)";
-            $(".header_container>.left_series").find(".block").css("border-color", "rgba(" + dark_ct_color + " ,1)");
+            $(".header_container>.left_series").find(".block").css("border-color", "rgba(" + ct_color + " ,1)");
             $(".header_container>.left_series").find(".win").css("background", "rgba(" + ct_color + ", 1)");
             $(".header_container>.left_series").find(".win").css("box-shadow", "rgba(" + dark_ct_color + ", 1) 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");
         } else {
             health_color = "linear-gradient(90deg, rgba(" + t_color + ", 0.3) 0px, rgba(" + t_color + ", 0.9) 143px, rgba(" + t_color + ", 1) 330px)";
-            $(".header_container>.left_series").find(".block").css("border-color", "rgba(" + dark_t_color + ",1)");
+            $(".header_container>.left_series").find(".block").css("border-color", "rgba(" + t_color + ",1)");
             $(".header_container>.left_series").find(".win").css("background", "rgba(" + t_color + ",1)");
             $(".header_container>.left_series").find(".win").css("box-shadow", "rgba(" + dark_t_color + ",1) 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/back.png)");

@@ -527,36 +527,36 @@ sub {
 
 .header_container>.left_series {
     position: absolute;
-    left: 55px;
+    left: 310px;
     top: 25px;
     width: 17px;
     height: 45px;
-    z-index: 50;
+    z-index: 490;
 }
 
 .block {
     margin-bottom: 7px;
-    width: 25px;
-    height: 15px;
-    border: solid 1px;
-    z-index: 51;
+    width: 22px;
+    height: 12px;
+    border: solid 3px;
+    z-index: 491;
 }
 
 .block.win {
     margin-bottom: 7px;
-    width: 25px;
-    height: 15px;
-    border: solid 1px;
-    z-index: 51;
+    width: 22px;
+    height: 12px;
+    border: solid 3px;
+    z-index: 491;
 }
 
 .header_container>.right_series {
     position: absolute;
-    right: 65px;
+    right: 310px;
     top: 25px;
     width: 17px;
     height: 45px;
-    z-index: 50;
+    z-index: 490;
 }
 
 .header_container>.left_line {
@@ -756,10 +756,10 @@ sub {
     text-transform: uppercase;
     line-height: 1.2;
     position: absolute;
-    left: 12px;
+    left: 0px;
     top: 24px;
     position: absolute;
-    width: 300;
+    width: 280px;
     height: 40px;
     z-index: 57;
     text-align: right;
@@ -774,10 +774,10 @@ sub {
     text-transform: uppercase;
     line-height: 1.2;
     position: absolute;
-    right: 12px;
+    right: 0px;
     top: 24px;
     position: absolute;
-    width: 300px;
+    width: 280px;
     height: 40px;
     z-index: 57;
     text-align: left;
@@ -792,7 +792,7 @@ sub {
     text-transform: uppercase;
     line-height: 1.4;
     position: absolute;
-    left: 310px;
+    left: 320px;
     top: 0px;
     position: absolute;
     width: 86px;
