@@ -541,7 +541,7 @@ sub {
 
 .header_container>.right_series {
     position: absolute;
-    right: 310px;
+    right: 320px;
     top: 25px;
     width: 17px;
     height: 45px;
