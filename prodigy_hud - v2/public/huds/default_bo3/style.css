@@ -516,7 +516,7 @@ sub {
 
 .header_container>.left_series {
     position: absolute;
-    left: 310px;
+    left: 300px;
     top: 25px;
     width: 17px;
     height: 45px;
@@ -541,7 +541,7 @@ sub {
 
 .header_container>.right_series {
     position: absolute;
-    right: 320px;
+    right: 310px;
     top: 25px;
     width: 17px;
     height: 45px;
