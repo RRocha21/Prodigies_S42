@@ -35,7 +35,9 @@ var bo = 1;
 var flag_replays = 1;
 
 var t_color = "229, 16, 27";
+// var t_color = "191, 13, 23";
 var ct_color = "0, 199, 209";
+// var ct_color = "0, 170, 179";
 var dark_ct_color = "0, 0, 0";
 var dark_t_color = "0, 0, 0";
 

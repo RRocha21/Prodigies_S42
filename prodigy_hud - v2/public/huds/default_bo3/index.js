@@ -29,8 +29,10 @@ var bo = 3;
 
 var flag_replays = 1;
 
-var t_color = "229, 16, 27";
+var t_color = "229, 16, 27";  
+// var t_color = "217, 15, 26";
 var ct_color = "0, 199, 209";
+// var ct_color = "0, 194, 204";
 var dark_ct_color = "0, 0, 0";
 var dark_t_color = "0, 0, 0";
 
@@ -51,6 +53,7 @@ numtext = 0;
 var txt = ["../../files/img/hud_elements/logo_prodigies.png", "../../files/img/hud_elements/logo_pew.png"];
 var txt_sponsor = ["../../files/img/hud_elements/SLIDE_1.png", "../../files/img/hud_elements/SLIDE_2.png"];
 var count = 1;
+$(".sponsor>.inner").html("<img src=../../files/img/hud_elements/SLIDE_1.png></img>")
 $(document).ready(
     function() {
         setInterval(function() {
@@ -63,9 +66,9 @@ $(document).ready(
                 $(this).html("<img src='" + txt[numtext] + "'></img>")
 
             }).fadeIn();
-            $(".sponsor>.inner").fadeOut(function() {
-                $(this).html("<img src='" + txt_sponsor[numtext] + "'></img>")
-            }).fadeIn();
+            // $(".sponsor>.inner").fadeOut(function() {
+            //     $(this).html("<img src='" + txt_sponsor[numtext] + "'></img>")
+            // }).fadeIn();
         }, 15000);
     });
 
@@ -851,6 +854,9 @@ function updatePage(data) {
     var matchup = data.getMatchType();
     var match = data.getMatch();
 
+    var map = data.map();
+    var map_text = map.name.slice(3);
+
     map1 = match.map_pick.map1; // Map 1 Name
     map2 = match.map_pick.map2; // Map 2 Name
     map3 = match.map_pick.map3; // Map 3 Name
@@ -865,6 +871,14 @@ function updatePage(data) {
     map3_res1 = match.map_3_res.map_left_res;
     map3_res2 = match.map_3_res.map_right_res;
 
+    if (matchup && matchup.toLowerCase() != "none") {
+        bo = 3;
+    } else {
+        bo = 1;
+        var map = data.map();
+        var map_text = map.name.slice(3);
+        map3 = map_text;
+    }
 
     if (matchup && matchup.toLowerCase() != "none") {
 
