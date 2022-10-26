@@ -2531,16 +2531,16 @@ sub {
 
 .sponsor>.inner {
     position: absolute;
-    left: 78px;
-    top: 2px;
-    width: 360px;
-    height: 55px;
+    left: 0px;
+    top: 0px;
+    width: 515px;
+    height: 60px;
     z-index: 505;
 }
 
 .sponsor>.inner img {
-    width: 360px;
-    height: 55px;
+    width: 515px;
+    height: 60px;
 }
 
 .map_picks {

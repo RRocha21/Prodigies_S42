@@ -57,6 +57,8 @@ var count = 1;
 numtext = 0;
 var txt = ["../../files/img/hud_elements/logo_prodigies.png", "../../files/img/hud_elements/logo_pew.png"];
 var txt_sponsor = ["../../files/img/hud_elements/SLIDE_1.png", "../../files/img/hud_elements/SLIDE_2.png"];
+$(".sponsor>.inner").html("<img src=../../files/img/hud_elements/SLIDE_3.png></img>")
+// }).fadeIn();
 var count = 1;
 $(document).ready(
     function() {
@@ -70,9 +72,9 @@ $(document).ready(
                 $(this).html("<img src='" + txt[numtext] + "'></img>")
 
             }).fadeIn();
-            $(".sponsor>.inner").fadeOut(function() {
-                $(this).html("<img src='" + txt_sponsor[numtext] + "'></img>")
-            }).fadeIn();
+            // $(".sponsor>.inner").fadeOut(function() {
+            //     $(this).html("<img src='" + txt_sponsor[numtext] + "'></img>")
+            // }).fadeIn();
         }, 15000);
     });
 

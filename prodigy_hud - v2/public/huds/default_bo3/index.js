@@ -53,7 +53,7 @@ numtext = 0;
 var txt = ["../../files/img/hud_elements/logo_prodigies.png", "../../files/img/hud_elements/logo_pew.png"];
 var txt_sponsor = ["../../files/img/hud_elements/SLIDE_1.png", "../../files/img/hud_elements/SLIDE_2.png"];
 var count = 1;
-$(".sponsor>.inner").html("<img src=../../files/img/hud_elements/SLIDE_1.png></img>")
+$(".sponsor>.inner").html("<img src=../../files/img/hud_elements/SLIDE_3.png></img>")
 $(document).ready(
     function() {
         setInterval(function() {
